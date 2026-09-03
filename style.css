@@ -263,34 +263,46 @@ a { color: inherit; }
    MOBILE RESPONSIVENESS — ADDITIONAL OVERRIDES ONLY
    =========================================================== */
 
+/* ---------- COMPACT MOBILE NAV ---------- */
+
 @media (max-width: 900px) {
 
-  /* ---------- NAVIGATION ---------- */
-
   .nav {
-    padding: 1rem 5vw;
+    padding: 0.6rem 3vw;
   }
 
   .nav-inner {
-    flex-direction: column;
-    gap: 0.8rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+  }
+
+  .nav-logo {
+    flex-shrink: 0;
   }
 
   .nav-logo img {
+    height: 30px;
     box-shadow: none !important;
   }
 
   .nav-links {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem 1rem;
-    width: 100%;
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.55rem;
+    width: auto;
   }
 
   .nav-links a {
-    font-size: 0.78rem;
+    font-size: 0.58rem;
+    letter-spacing: 0;
+    white-space: nowrap;
   }
+
 
 
   /* ---------- HERO ---------- */

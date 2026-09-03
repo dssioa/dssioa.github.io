@@ -258,3 +258,143 @@ a { color: inherit; }
   .projects-grid, .testimonials-grid { grid-template-columns: 1fr; }
   .bubble, .bubble--2, .bubble--3 { align-self: stretch; max-width: none; }
 }
+/* ===========================================================
+   MOBILE RESPONSIVENESS
+   =========================================================== */
+
+@media (max-width: 900px) {
+
+  /* NAVIGATION */
+  .nav {
+    padding: 1rem 5vw;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem 5vw 3rem;
+    text-align: center;
+  }
+
+  .hero-text,
+  .hero-visual {
+    width: 100%;
+  }
+
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-btns .btn {
+    min-width: 160px;
+    padding: 0.85rem 1.4rem;
+  }
+
+
+  /* ABOUT / INTRO */
+  .intro {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem 5vw 4rem;
+    text-align: center;
+  }
+
+  .intro-photo {
+    flex: none;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .intro-bubbles {
+    width: 100%;
+    align-items: center;
+  }
+
+  .bubble,
+  .bubble--2,
+  .bubble--3 {
+    align-self: center;
+    width: 100%;
+    max-width: 480px;
+    margin-left: 0;
+  }
+
+  .intro-bubbles .btn {
+    align-self: center;
+    width: auto;
+    max-width: 100%;
+    min-width: 220px;
+  }
+
+
+  /* SECTION TITLES */
+  .section-title {
+    text-align: center;
+  }
+
+
+  /* PROJECTS */
+  .projects {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* TESTIMONIALS */
+  .testimonials {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* CONTACT */
+  .contact {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
+  }
+
+  .contact-info,
+  .contact .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* PREVENT HORIZONTAL CUT-OFF */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}

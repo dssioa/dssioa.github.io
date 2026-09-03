@@ -309,17 +309,23 @@ a { color: inherit; }
 
   .nav-links .btn {
 
-    padding: 0.35rem 0.7rem;
+    display: inline-flex;
 
-    min-width: auto;
+    width: auto !important;
 
-    width: auto;
+    min-width: 0 !important;
 
-    font-size: 0.52rem;
+    max-width: none !important;
 
-    line-height: 1.2;
+    padding: 0.22rem 0.55rem !important;
 
-    border-radius: 20px;
+    margin: 0 !important;
+
+    font-size: 0.5rem !important;
+
+    line-height: 1 !important;
+
+    border-radius: 12px;
 
     white-space: nowrap;
 
@@ -408,7 +414,7 @@ a { color: inherit; }
     transform: translateX(-50%);
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 12px solid #260132;
+    border-bottom: 12px solid #8D0FA4;
     border-top: none;
   }
 

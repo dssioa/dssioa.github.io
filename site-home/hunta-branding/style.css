@@ -1,0 +1,512 @@
+/* ===========================================================
+   HUNTA PRODUCTIONS — CASE STUDY
+   Same portfolio shell as Pili Ani
+   =========================================================== */
+
+
+/* ===========================================================
+   EFCO BROOKSHIRE
+   =========================================================== */
+
+@font-face {
+  font-family: "EFCO Brookshire";
+  src: url("assets/fonts/EFCO-Brookshire.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ===========================================================
+   VARIABLES
+   =========================================================== */
+
+:root {
+
+  /* Hunta colors */
+
+  --dark-roast: #562607;
+  --caramel: #B8763D;
+  --cream-sand: #E7CB99;
+  --parchment: #F1E9DA;
+  --ink: #2E2013;
+
+
+  /*
+    These are the shared portfolio fonts.
+
+    IMPORTANT:
+    EFCO is NOT used for the body text.
+    It is ONLY used for the project title.
+  */
+
+  --font-serif:
+    Cambria,
+    Georgia,
+    serif;
+
+  --font-sans:
+    Inter,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+
+}
+
+
+/* ===========================================================
+   RESET
+   =========================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  font-family: var(--font-sans);
+
+  color: var(--ink);
+
+  background: var(--parchment);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* ===========================================================
+   CASE STUDY HEADER
+   =========================================================== */
+
+.case-header {
+
+  background: var(--parchment);
+
+  padding: 3rem 6vw 0;
+
+}
+
+
+.case-header-inner {
+
+  max-width: 780px;
+
+  margin: 0 auto;
+
+  text-align: left;
+
+}
+
+
+/* ===========================================================
+   BACK TO PORTFOLIO
+   =========================================================== */
+
+.back-link {
+
+  display: inline-block;
+
+  color: var(--dark-roast);
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  margin-bottom: 2rem;
+
+}
+
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ===========================================================
+   EYEBROW
+   =========================================================== */
+
+.eyebrow {
+
+  color: var(--caramel);
+
+  font-weight: 700;
+
+  font-size: 0.78rem;
+
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+
+  margin: 0 0 0.9rem;
+
+}
+
+
+/* ===========================================================
+   PROJECT TITLE
+   =========================================================== */
+
+/*
+   ONLY THE PROJECT NAME USES EFCO BROOKSHIRE.
+*/
+
+.case-header h1 {
+
+  font-family:
+    "EFCO Brookshire",
+    Cambria,
+    Georgia,
+    serif;
+
+  font-weight: 400;
+
+  font-size:
+    clamp(
+      2.4rem,
+      6vw,
+      3.6rem
+    );
+
+  color: var(--dark-roast);
+
+  margin: 0 0 1rem;
+
+  line-height: 1.05;
+
+}
+
+
+/* ===========================================================
+   PROJECT DESCRIPTION
+   =========================================================== */
+
+/*
+   This uses the SAME body font as the other portfolio pages.
+*/
+
+.subtitle {
+
+  font-family: var(--font-sans);
+
+  font-size: 1.15rem;
+
+  color: #5C4A34;
+
+  max-width: 620px;
+
+  line-height: 1.55;
+
+  margin: 0 0 2rem;
+
+}
+
+
+/* ===========================================================
+   PROJECT META
+   =========================================================== */
+
+.meta-row {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 2.5rem;
+
+  padding-bottom: 2.5rem;
+
+  border-bottom:
+    1px solid
+    rgba(86, 38, 7, 0.15);
+
+}
+
+
+.meta-item {
+
+  font-family: var(--font-sans);
+
+  font-size: 0.98rem;
+
+  color: var(--ink);
+
+  font-weight: 600;
+
+}
+
+
+.meta-item span {
+
+  display: block;
+
+  font-family: var(--font-sans);
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  color: var(--caramel);
+
+  margin-bottom: 0.3rem;
+
+}
+
+
+/* ===========================================================
+   PREVIEW
+   =========================================================== */
+
+.preview-section {
+  width: 100%;
+  background: var(--parchment);
+  padding: 1.5rem 3vw 3rem;
+}
+
+.preview-image {
+  max-width: 850px;
+  margin: 0 auto;
+  background: #B8763D;
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 50px -20px rgba(86, 38, 7, 0.35);
+}
+
+.preview-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===========================================================
+   VIEW FULL GUIDE BUTTON
+   =========================================================== */
+
+.view-guide-btn {
+
+  display: flex;
+
+  width: fit-content;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 0.6rem;
+
+  margin:
+    2rem
+    auto
+    0;
+
+  padding:
+    0.9rem
+    1.8rem;
+
+  background: var(--dark-roast);
+
+  color: #ffffff;
+
+  border-radius: 30px;
+
+  font-family: var(--font-sans);
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+
+}
+
+
+.view-guide-btn:hover {
+
+  background: #6b3009;
+
+  transform: translateY(2px);
+
+}
+
+
+/* ===========================================================
+   FULL SVG GUIDE
+   =========================================================== */
+
+/*
+   Every SVG keeps its ORIGINAL dimensions.
+
+   They can be:
+
+   1920 × 1080
+   1920 × 950
+   1920 × 727
+   etc.
+
+   That is intentional.
+
+   We do NOT force 16:9.
+*/
+
+.guide {
+
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  background: var(--parchment);
+
+  /*
+     Prevent inline image whitespace.
+  */
+
+  font-size: 0;
+
+  line-height: 0;
+
+}
+
+
+.guide img {
+
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  max-width: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+
+}
+
+
+/* ===========================================================
+   FOOTER
+   =========================================================== */
+
+.case-footer {
+
+  text-align: center;
+
+  padding:
+    2.5rem
+    6vw
+    3.5rem;
+
+  color: #5C4A34;
+
+}
+
+
+.case-footer p {
+
+  font-family: var(--font-sans);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.08em;
+
+  margin:
+    0
+    0
+    0.8rem;
+
+}
+
+
+.case-footer a {
+
+  color: var(--dark-roast);
+
+  text-decoration: none;
+
+  font-family: var(--font-sans);
+
+  font-weight: 600;
+
+  font-size: 0.9rem;
+
+}
+
+
+.case-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* ===========================================================
+   MOBILE
+   =========================================================== */
+
+@media (max-width: 900px) {
+
+  .case-header {
+    padding:
+      2rem
+      6vw
+      0;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .preview-section {
+
+    padding:
+      1.5rem
+      4vw
+      3.5rem;
+
+  }
+
+
+  .meta-row {
+
+    gap:
+      1.5rem;
+
+  }
+
+
+  .view-guide-btn {
+
+    margin-top: 1.5rem;
+
+  }
+
+}

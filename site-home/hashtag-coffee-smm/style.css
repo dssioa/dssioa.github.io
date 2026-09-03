@@ -1,0 +1,166 @@
+/* ===========================================================
+   Hashtag Coffee — Social Media & Marketing
+   =========================================================== */
+
+:root {
+  --hc-blue: #133B67;
+  --hc-gold: #CD8A11;
+  --hc-cream: #FAF3E7;
+  --hc-cream-alt: #F2E9D8;
+  --ink: #26241F;
+
+  --font-display: 'Times New Roman', Times, serif;
+  --font-body: 'Lato', -apple-system, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--hc-cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ============ CASE HEADER ============ */
+.case-header { background: var(--hc-cream); padding: 3rem 6vw 2rem; text-align: left; }
+.case-header-inner {   max-width: 1080px;   margin: 0 auto;   padding: 0 6vw; }  
+.back-link { display: inline-block; color: var(--hc-blue); text-decoration: none; font-size: 0.9rem; font-weight: 700; margin-bottom: 2rem; }
+.back-link:hover { text-decoration: underline; }
+.eyebrow { color: var(--hc-gold); font-weight: 700; font-size: 0.76rem; letter-spacing: 0.09em; text-transform: uppercase; margin: 0 0 1.2rem; }
+.client-logo { height: 46px; width: auto; margin-bottom: 1rem; }
+.case-header h1 {
+  font-family: var(--font-display);
+  font-stretch: condensed;
+  letter-spacing: -0.01em;
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  color: var(--hc-blue);
+  margin: 0 0 1rem;
+  line-height: 1.05;
+}
+.subtitle { font-size: 1.1rem; color: #4A4436; max-width: 640px; line-height: 1.6; margin: 0 0 2rem; }
+.meta-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(19,59,103,0.15); }
+.meta-item { font-size: 0.95rem; color: var(--ink); font-weight: 600; max-width: none; line-height: 1.4; }
+.meta-item span { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--hc-gold); margin-bottom: 0.35rem; }
+
+/* ============ WORK SECTIONS ============ */
+.work-section { max-width: 1080px; margin: 0 auto; padding: 4rem 6vw; }
+.work-section--alt {
+  max-width: none;
+  background: var(--hc-cream-alt);
+  padding-left: max(6vw, calc((100vw - 1080px) / 2 + 6vw));
+  padding-right: max(6vw, calc((100vw - 1080px) / 2 + 6vw));
+}
+.work-section--alt > * { max-width: 1080px; margin-left: auto; margin-right: auto; }
+
+.section-title {
+  font-family: var(--font-display);
+  font-stretch: condensed;
+  font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+  color: var(--hc-blue);
+  margin: 0 0 0.5rem;
+}
+.section-sub { font-size: 1rem; color: #5C5646; margin: 0 0 2rem; max-width: 620px; }
+
+/* Grids */
+.grid { display: grid; gap: 1rem; }
+.grid--3x3 { grid-template-columns: repeat(3, 1fr); }
+.grid--3col { grid-template-columns: repeat(3, 1fr); }
+
+.grid-item {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/5;
+  box-shadow: 0 8px 20px -12px rgba(19,59,103,0.25);
+  transition: transform 0.2s;
+}
+.grid-item:hover { transform: translateY(-3px); }
+.grid-item img { width: 100%; height: 100%; object-fit: cover; }
+.grid--3x3 .grid-item { aspect-ratio: 4/5; }
+.grid--3col .grid-item { aspect-ratio: auto; height: auto; }
+.grid--3col .grid-item img { height: 220px; object-fit: cover; }
+.grid-caption {
+  margin: 0;
+  padding: 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--hc-blue);
+  background: #fff;
+  text-align: center;
+}
+
+/* Website section */
+.website-frame {
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px -25px rgba(19,59,103,0.4);
+}
+
+/* Reels */
+.reels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.reel-embed { aspect-ratio: 9/16; border-radius: 10px; overflow: hidden; background: #fff; }
+.reel-embed iframe { width: 100%; height: 100%; border: none; }
+.reel-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  background: repeating-linear-gradient(45deg, #eee, #eee 10px, #f7f7f7 10px, #f7f7f7 20px);
+  border: 2px dashed var(--hc-blue);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.reel-placeholder p { font-size: 0.82rem; color: var(--hc-blue); font-weight: 600; margin: 0; }
+
+/* ============ LIGHTBOX ============ */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(19,15,10,0.92);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox-img { max-width: 88vw; max-height: 86vh; border-radius: 6px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+.lightbox-close {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  background: none; border: none; color: #fff; font-size: 2.2rem;
+  cursor: pointer; line-height: 1;
+}
+.lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.12); border: none; color: #fff;
+  width: 48px; height: 48px; border-radius: 50%;
+  font-size: 1.3rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.lightbox-nav:hover { background: rgba(255,255,255,0.25); }
+.lightbox-nav--prev { left: 2rem; }
+.lightbox-nav--next { right: 2rem; }
+
+/* ============ FOOTER ============ */
+.case-footer { text-align: center; padding: 2.5rem 6vw 3.5rem; background: var(--hc-cream); }
+.case-footer p { font-size: 0.72rem; letter-spacing: 0.08em; margin: 0 0 0.8rem; color: #8A7E68; }
+.case-footer a { color: var(--hc-blue); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+.case-footer a:hover { text-decoration: underline; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 760px) {
+  .grid--3x3, .grid--3col, .reels-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-section { padding: 3rem 6vw; }
+  .lightbox-nav { width: 40px; height: 40px; }
+  .lightbox-nav--prev { left: 0.6rem; }
+  .lightbox-nav--next { right: 0.6rem; }
+}

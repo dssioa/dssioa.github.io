@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alchemy of Unity | Designy Diossa</title>
+  <meta name="description" content="Funnel design for a Netherlands-based spiritual coach.">
+  <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+</head>
+<body>
+  <header class="case-header">
+    <div class="case-header-inner">
+      <a href="/" class="back-link">← Back to portfolio</a>
+      <p class="eyebrow">Funnel Design · Lead Generation</p>
+      <h1>Alchemy of Unity</h1>
+      <p class="subtitle">
+        A conversion-focused funnel designed for a Netherlands-based spiritual coach,
+        translating the client's offer into a clear journey from landing page to order and next steps.
+      </p>
+      <div class="meta-row">
+        <div class="meta-item"><span>Role</span>Funnel Designer and Builder</div>
+        <div class="meta-item"><span>Deliverables</span>Landing page, order page, thank-you page</div>
+        <div class="meta-item"><span>Tools</span>Figma, GoHighLevel</div>
+      </div>
+      <div class="status">Concept / Unlaunched</div>
+    </div>
+  </header>
+
+  <section class="preview-section">
+    <div class="preview-image">
+      <img src="assets/funnel/1mockup.svg" alt="Spiritual coach funnel design shown in a device mockup">
+    </div>
+  </section>
+
+  <main class="funnel">
+    <div class="funnel-inner">
+      <div class="section-intro">
+        <p class="section-eyebrow">The Funnel</p>
+        <h2>From first impression to next step.</h2>
+        <p>
+          Three connected pages designed to guide visitors through the offer
+          with a clear and intentional user journey.
+        </p>
+      </div>
+
+      <section class="funnel-page">
+        <div class="page-heading"><span>01</span><h3>Landing Page</h3></div>
+        <div class="page-preview"><img src="assets/funnel/landing.svg" alt="Spiritual coach funnel landing page design" loading="lazy"></div>
+        <button class="view-page-btn" type="button" data-image="assets/funnel/landing.svg" data-title="Landing Page">
+          View full page <span aria-hidden="true">↗</span>
+        </button>
+      </section>
+
+      <section class="funnel-page">
+        <div class="page-heading"><span>02</span><h3>Order Page</h3></div>
+        <div class="page-preview"><img src="assets/funnel/order.svg" alt="Spiritual coach funnel order page design" loading="lazy"></div>
+        <button class="view-page-btn" type="button" data-image="assets/funnel/order.svg" data-title="Order Page">
+          View full page <span aria-hidden="true">↗</span>
+        </button>
+      </section>
+
+      <section class="funnel-page">
+        <div class="page-heading"><span>03</span><h3>Thank You Page</h3></div>
+        <div class="page-preview"><img src="assets/funnel/thank.svg" alt="Spiritual coach funnel thank you page design" loading="lazy"></div>
+        <button class="view-page-btn" type="button" data-image="assets/funnel/thank.svg" data-title="Thank You Page">
+          View full page <span aria-hidden="true">↗</span>
+        </button>
+      </section>
+    </div>
+  </main>
+
+  <div class="page-modal" id="pageModal" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <h2 id="modalTitle">Landing Page</h2>
+        <button class="modal-close" type="button" aria-label="Close full page view">×</button>
+      </div>
+      <div class="modal-image-wrap">
+        <img id="modalImage" src="" alt="">
+      </div>
+    </div>
+  </div>
+
+  <footer class="case-footer">
+    <p>FUNNEL DESIGN · PORTFOLIO PROJECT</p>
+    <a href="/">← Back to portfolio</a>
+  </footer>
+
+  <script>
+    const modal = document.getElementById("pageModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalTitle = document.getElementById("modalTitle");
+    const closeButton = document.querySelector(".modal-close");
+    const overlay = document.querySelector(".modal-overlay");
+
+    document.querySelectorAll(".view-page-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        modalImage.src = button.dataset.image;
+        modalImage.alt = `${button.dataset.title} — full funnel design`;
+        modalTitle.textContent = button.dataset.title;
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+      modalImage.src = "";
+    }
+
+    closeButton.addEventListener("click", closeModal);
+    overlay.addEventListener("click", closeModal);
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+    });
+  </script>
+</body>
+</html>

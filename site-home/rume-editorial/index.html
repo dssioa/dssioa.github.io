@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUME Magazine | Designy Diossa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+<style>
+  :root {
+    --paper: #FFFFFF;
+    --ink: #17181A;
+    --ink-soft: #6E6E6C;
+    --rule: #E4E2DC;
+    --gold: #B9922E;
+    --teal: #205C4E;
+    --sage: #8FA07E;
+    --terracotta: #C97A54;
+    --cream: #F6E4C8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---- SPEC TAG ---- */
+  .spec-tag {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 9px 12px;
+  }
+  .spec-tag span { opacity: 0.6; }
+
+  /* ---- MASTHEAD (matched to RUME's real wordmark layout) ---- */
+  .masthead {
+    text-align: center;
+    padding: 30px 24px 20px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .masthead .word {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 0.02em;
+  }
+  .masthead .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 0.32em;
+    color: var(--ink-soft);
+    margin-top: 2px;
+  }
+  .masthead img.logo-img {
+    height: 34px;
+    width: auto;
+  }
+  .masthead nav {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    margin-top: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: #1e1e1e;
+  }
+  @media (max-width: 560px) { .masthead nav { display: none; } }
+
+  /* ---- HERO PHOTO ---- */
+  .hero-photo {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    max-height: 560px;
+  }
+  .hero-caption {
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    padding: 8px 0 0;
+    font-style: italic;
+  }
+
+  .article-head { padding: 40px 0 8px; }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.14;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+
+  .standfirst {
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin-bottom: 24px;
+  }
+
+  .byline {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-size: 12px;
+    color: var(--ink-soft);
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 34px;
+  }
+  .byline .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-soft); }
+
+  /* ---- BODY ---- */
+  article p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink);
+    margin-bottom: 23px;
+    max-width: 66ch;
+  }
+
+  article p:first-of-type::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 0.75;
+    float: left;
+    padding: 6px 8px 0 0;
+    color: var(--teal);
+  }
+
+  h2.section-head {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--ink);
+    margin: 42px 0 16px;
+  }
+
+  .pullquote {
+    margin: 38px 0;
+    padding: 4px 0 4px 24px;
+    border-left: 2px solid var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.42;
+    color: var(--ink);
+    max-width: 58ch;
+  }
+
+  .inline-photo {
+    width: 100%;
+    margin: 36px 0 10px;
+    border-radius: 2px;
+    display: block;
+  }
+  .inline-photo-row {
+    display: flex;
+    gap: 4px;
+    margin: 36px 0 10px;
+  }
+  .inline-photo-row img { width: 50%; object-fit: cover; height: 260px; }
+  .caption {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+
+  .provenance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin: 38px 0 44px;
+  }
+  .provenance div {
+    background: var(--cream);
+    padding: 22px 18px;
+  }
+  .provenance .label {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.provenance .value {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    color: var(--ink);
+}
+  @media (max-width: 560px) { .provenance { grid-template-columns: 1fr; } }
+
+  /* ---- FOOTER ---- */
+  footer {
+    margin-top: 66px;
+    padding: 32px 0 60px;
+    border-top: 1px solid var(--rule);
+  }
+  .footer-eyebrow {
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+  }
+  .related {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  @media (max-width: 560px) { .related { grid-template-columns: 1fr; } }
+  .related-item .kicker {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  .related-item .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--ink);
+    line-height: 1.35;
+    text-decoration: none;
+    display: block;
+  }
+  .related-item .title:hover { text-decoration: underline; }
+
+  .credit-block {
+    margin-top: 46px;
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+  <div class="spec-tag">Concept feature &nbsp;·&nbsp; unaffiliated spec work for portfolio purposes <span>— not a published RUME article</span></div>
+
+  <div class="masthead">
+    <img class="logo-img" src="assets/images/rume-logo.png" alt="RUME Magazine" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
+    <div id="logo-fallback" style="display:none;">
+      <div class="word">RUME</div>
+      <div class="sub">MAGAZINE</div>
+    </div>
+    <nav>
+      <span>Local</span><span>International</span><span>Dining</span><span>Hotels</span><span>Lifestyle</span>
+    </nav>
+  </div>
+
+  <img class="hero-photo" src="assets/images/pili-ani-hero-banner.jpg" alt="Pili Ani's skincare product lineup">
+
+  <div class="wrap">
+    <p class="hero-caption">Pili Ani's skincare product lineup — facial cream, lip balms, facial oils, cleansers, toners, masks, and lotions. Photography courtesy of Pili Ani.</p>
+
+    <div class="article-head">
+      <div class="eyebrow">Brand Insights</div>
+      <h1>The tree that doesn't leave Bicol</h1>
+      <p class="standfirst">A Filipino-owned skincare label built its entire identity on a fruit most of the world can't name. Here's how Pili Ani turned a single native tree, and the farmers who tend it, into a heritage story with genuine reach.</p>
+      <div class="byline">
+        <span>Words by Diossa May Banaag</span>
+        <span class="dot"></span>
+        <span>6 min read</span>
+        <span class="dot"></span>
+        <span>Lifestyle · Well-being</span>
+      </div>
+    </div>
+
+    <article>
+      <p>Nearly two decades ago, a longtime organic-farming advocate named Rosalina Tan moved to the Bicol region to work directly with grassroots farmers. There she met Noli, a local grower, and was introduced to a tree she hadn't paid much attention to before: pili, native to the Philippines and, at the time, mostly known regionally for its nuts. What caught her interest wasn't the fruit itself, but what came out of it, an oil with an unusually high oleic acid content, and a second, sharper compound drawn from the tree's resin, called elemi, which she learned was already prized in high-end French skincare for its firming effect. Few people in the Philippines seemed to know that a French luxury ingredient was growing wild in their own backyard.</p>
+
+      <p>That discovery is the entire premise of Pili Ani, the skincare brand Tan later built with her daughter, Mary Jane Ong. It launched in the Philippines in 2016 and in the United States the following year, positioned as the only skincare line in the world formulating with both pili and elemi oil in every product. But the more interesting part of the story isn't the ingredient pairing. It's what happened when Tan looked closer at how elemi was actually being harvested.</p>
+
+      <h2 class="section-head">A problem hiding inside the opportunity</h2>
+
+      <p>Elemi resin comes from tapping the tree, not harvesting its fruit, and the practice had a history of being done carelessly. Overharvesting was damaging the trees themselves, putting both the resource and the farmers who depended on it at risk. Rather than treat that as a supply-chain footnote, Tan built an agricultural education program around it, training farmers in sustainable tapping methods that protect the tree's long-term health instead of maximizing a single season's yield. It's a slower model, and a more deliberate one, built for a tree that some of these communities will still be tending decades from now.</p>
+
+      <div class="pullquote">Noli, the farmer who first showed Rosalina Tan a pili tree, still harvests for the brand today.</div>
+
+      <div class="inline-photo-row">
+        <img src="assets/images/pili-ani-tree.jpg" alt="A pili tree trunk in Bicol, Philippines, showing a resin tapping mark">
+        <img src="assets/images/pili-ani-product-hero.jpg" alt="Pili Ani product bottles on natural stone">
+      </div>
+      <p class="caption">Left: a pili tree in Bicol, tapped for elemi resin. Right: the finished formulations. Photography courtesy of Pili Ani.</p>
+
+      <p>That continuity matters. It's easy for a beauty brand to gesture at "giving back" with a one-line pledge; it's harder to point to the same named farmer still working the same trees, close to two decades on. Pili Ani's giving-back model is built around exactly that kind of specificity: the brand has helped over 200 families across the Bicol region, planted more than 250 pili trees of its own, and is now working with the Philippine government toward a target of 20,000 more, an explicit reforestation commitment rather than an offset bought elsewhere and mentioned once.</p>
+
+      <div class="provenance">
+        <div>
+          <div class="label">Region</div>
+          <div class="value">Bicol, Philippines</div>
+        </div>
+        <div>
+          <div class="label">Signature ingredients</div>
+          <div class="value">Pili &amp; elemi oil</div>
+        </div>
+        <div>
+          <div class="label">Reforestation goal</div>
+          <div class="value">250 planted, 20,000 pledged</div>
+        </div>
+      </div>
+
+      <h2 class="section-head">A local story with an international reach</h2>
+
+      <p>What's notable about Pili Ani's trajectory is how much of it has happened without leaving its origin behind. The brand has been featured in Forbes and made a milestone debut on the U.S. Home Shopping Network, both signs of a real audience beyond the Philippines. Yet the founder still has a hands-on relationship with growers like Noli, and the farmer partnerships behind each bottle haven't been diluted along the way. That's a harder balance to strike than it sounds: plenty of "heritage" brands quietly outsource the heritage part once they scale. Pili Ani's bet is that staying rooted, instead of abstracting the story into a marketing line, is exactly what makes it travel.</p>
+
+      <p>For a Filipina-founded label to carry a two-ingredient, single-region story onto international shelves is its own kind of milestone. It's also a useful signal for where independent beauty is heading: toward brands that can name the farmer, the tree, and the town, and mean it.</p>
+    </article>
+
+    <footer>
+      <div class="footer-eyebrow">More in Brand Insights</div>
+      <div class="related">
+        <div class="related-item">
+          <div class="kicker">Brand Insights</div>
+          <a class="title" href="https://rumemagazine.com/lifestyle/brand-insights/oura-smart-ring-health-accessory/" target="_blank" rel="noopener">Discover why the Oura smart ring leads in wellness tech</a>
+        </div>
+        <div class="related-item">
+          <div class="kicker">Brand Insights</div>
+          <a class="title" href="https://rumemagazine.com/lifestyle/brand-insights/" target="_blank" rel="noopener">More real Brand Insights stories from RUME →</a>
+        </div>
+      </div>
+
+      <div class="credit-block">
+        Concept feature designed and written by Diossa May Banaag as a spec/portfolio piece inspired by RUME Magazine's real "Brand Insights" content pillar. Pili Ani is an independent, real brand; this piece is unaffiliated fan/spec work created for design-portfolio purposes only. Product and tree photography courtesy of Pili Ani.
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

@@ -258,13 +258,15 @@ a { color: inherit; }
   .projects-grid, .testimonials-grid { grid-template-columns: 1fr; }
   .bubble, .bubble--2, .bubble--3 { align-self: stretch; max-width: none; }
 }
+
 /* ===========================================================
-   MOBILE RESPONSIVENESS
+   MOBILE RESPONSIVENESS — ADDITIONAL OVERRIDES ONLY
    =========================================================== */
 
 @media (max-width: 900px) {
 
-  /* NAVIGATION */
+  /* ---------- NAVIGATION ---------- */
+
   .nav {
     padding: 1rem 5vw;
   }
@@ -274,19 +276,25 @@ a { color: inherit; }
     gap: 0.8rem;
   }
 
+  .nav-logo img {
+    box-shadow: none !important;
+  }
+
   .nav-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.7rem 1.2rem;
+    gap: 0.6rem 1rem;
+    width: 100%;
   }
 
   .nav-links a {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
 
 
-  /* HERO */
+  /* ---------- HERO ---------- */
+
   .hero {
     flex-direction: column;
     gap: 2rem;
@@ -306,18 +314,25 @@ a { color: inherit; }
 
   .hero-btns {
     justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
   }
 
+  /* Make both hero buttons the same size */
   .hero-btns .btn {
-    min-width: 160px;
-    padding: 0.85rem 1.4rem;
+    width: 150px;
+    min-width: 150px;
+    padding: 0.8rem 0.5rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
   }
 
 
-  /* ABOUT / INTRO */
+  /* ---------- ABOUT / INTRO ---------- */
+
   .intro {
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
     padding: 2rem 5vw 4rem;
     text-align: center;
   }
@@ -331,32 +346,56 @@ a { color: inherit; }
   .intro-bubbles {
     width: 100%;
     align-items: center;
+    gap: 1rem;
   }
 
+  /* Smaller, mobile-friendly bubbles */
   .bubble,
   .bubble--2,
   .bubble--3 {
     align-self: center;
     width: 100%;
-    max-width: 480px;
+    max-width: 360px;
     margin-left: 0;
+    padding: 0.9rem 1.1rem;
+    border-radius: 16px;
   }
 
+  .bubble p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  /* Speech tail now points UP toward the photo */
+  .bubble::after {
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 12px solid #260132;
+    border-top: none;
+  }
+
+  /* About button */
   .intro-bubbles .btn {
     align-self: center;
     width: auto;
     max-width: 100%;
-    min-width: 220px;
+    min-width: 200px;
+    padding: 0.8rem 1.4rem;
   }
 
 
-  /* SECTION TITLES */
+  /* ---------- SECTION TITLES ---------- */
+
   .section-title {
     text-align: center;
   }
 
 
-  /* PROJECTS */
+  /* ---------- PROJECTS ---------- */
+
   .projects {
     padding-left: 5vw;
     padding-right: 5vw;
@@ -367,7 +406,8 @@ a { color: inherit; }
   }
 
 
-  /* TESTIMONIALS */
+  /* ---------- TESTIMONIALS ---------- */
+
   .testimonials {
     padding-left: 5vw;
     padding-right: 5vw;
@@ -378,7 +418,8 @@ a { color: inherit; }
   }
 
 
-  /* CONTACT */
+  /* ---------- CONTACT ---------- */
+
   .contact {
     padding-left: 5vw;
     padding-right: 5vw;
@@ -392,7 +433,8 @@ a { color: inherit; }
   }
 
 
-  /* PREVENT HORIZONTAL CUT-OFF */
+  /* ---------- PREVENT MOBILE HORIZONTAL CUT-OFF ---------- */
+
   html,
   body {
     overflow-x: hidden;

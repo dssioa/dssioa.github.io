@@ -552,6 +552,11 @@ a {
     box-shadow: none !important;
   }
 
+   .nav-logo img {
+  filter: drop-shadow(0 0 0 transparent) !important;
+  box-shadow: none !important;
+}
+
   .nav-links {
     display: flex;
     flex: 1;

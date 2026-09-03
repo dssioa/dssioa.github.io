@@ -552,11 +552,6 @@ a {
     box-shadow: none !important;
   }
 
-   .nav-logo img {
-  filter: drop-shadow(0 0 0 transparent) !important;
-  box-shadow: none !important;
-}
-
   .nav-links {
     display: flex;
     flex: 1;
@@ -582,8 +577,8 @@ a {
     width: auto !important;
     min-width: 0 !important;
     max-width: none !important;
-    height: auto !important;
-    padding: 0.18rem 0.45rem !important;
+    height: 18px !important;
+    padding: 0.1rem 0.3rem !important;
     margin: 0 !important;
     font-size: 0.48rem !important;
     line-height: 1 !important;

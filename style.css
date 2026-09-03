@@ -729,3 +729,13 @@ a {
     overflow-x: hidden;
   }
 }
+@media (max-width: 900px) {
+  .nav-links .btn {
+    background: red !important;
+    color: yellow !important;
+    padding: 0 !important;
+    width: 40px !important;
+    height: 15px !important;
+    font-size: 6px !important;
+  }
+}

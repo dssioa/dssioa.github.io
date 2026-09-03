@@ -263,8 +263,6 @@ a { color: inherit; }
    MOBILE RESPONSIVENESS — ADDITIONAL OVERRIDES ONLY
    =========================================================== */
 
-/* ---------- ONE-LINE MOBILE NAV ---------- */
-
 @media (max-width: 900px) {
 
   .nav {
@@ -307,7 +305,27 @@ a { color: inherit; }
     flex-shrink: 1;
   }
 }
+@media (max-width: 900px) {
 
+  .nav-links .btn {
+
+    padding: 0.35rem 0.7rem;
+
+    min-width: auto;
+
+    width: auto;
+
+    font-size: 0.52rem;
+
+    line-height: 1.2;
+
+    border-radius: 20px;
+
+    white-space: nowrap;
+
+  }
+
+}
 
 
   /* ---------- HERO ---------- */

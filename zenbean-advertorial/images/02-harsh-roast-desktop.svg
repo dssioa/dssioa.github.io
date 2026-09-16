@@ -1,0 +1,53 @@
+<svg viewBox="-80 0 1360 680" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t2 d2">
+<title id="t2">Where the Harshness Comes From</title>
+<desc id="d2">Bar chart showing chlorogenic acid retention falling as roast level darkens, alongside a diagram of scorching, a recognized roast defect from uneven heat.</desc>
+<rect x="-80" y="0" width="1360" height="680" fill="#F5F1EA"/>
+<text x="60" y="70" font-size="34" fill="#1A0F0A" font-weight="600" font-family="Space Grotesk, sans-serif">Where the harshness comes from</text>
+<text x="60" y="102" font-size="21" fill="#6B5A4F" font-family="Inter Tight, sans-serif">The acid compounds tied to sourness break down as roasting gets darker</text>
+
+<g transform="translate(60,150)">
+<text x="0" y="0" font-size="22" font-weight="600" fill="#1A0F0A" font-family="Space Grotesk, sans-serif">Chlorogenic acid retention by roast level</text>
+<line x1="0" y1="360" x2="480" y2="360" stroke="#1A0F0A" stroke-width="1.5"/>
+<line x1="0" y1="30" x2="0" y2="360" stroke="#1A0F0A" stroke-width="1.5"/>
+<g stroke="#E5DDD0" stroke-width="1">
+<line x1="0" y1="278" x2="480" y2="278"/><line x1="0" y1="196" x2="480" y2="196"/>
+<line x1="0" y1="114" x2="480" y2="114"/><line x1="0" y1="30" x2="480" y2="30"/>
+</g>
+<g font-size="16" fill="#6B5A4F" text-anchor="end">
+<text x="-12" y="364">0%</text><text x="-12" y="282">25%</text><text x="-12" y="200">50%</text>
+<text x="-12" y="118">75%</text><text x="-12" y="34">100%</text>
+</g>
+<rect x="30" y="30" width="72" height="330" fill="#1A0F0A"/>
+<text x="66" y="20" font-size="18" fill="#1A0F0A" text-anchor="middle" font-weight="600">100%</text>
+<rect x="150" y="162" width="72" height="198" fill="#8A5B3B"/>
+<text x="186" y="152" font-size="18" fill="#1A0F0A" text-anchor="middle" font-weight="600">~40%</text>
+<rect x="270" y="262" width="72" height="98" fill="#C8102E"/>
+<text x="306" y="252" font-size="18" fill="#1A0F0A" text-anchor="middle" font-weight="600">~20%</text>
+<rect x="390" y="343" width="72" height="17" fill="#3B2418"/>
+<text x="426" y="333" font-size="18" fill="#1A0F0A" text-anchor="middle" font-weight="600">~0-5%</text>
+<g font-size="16" fill="#6B5A4F" text-anchor="middle">
+<text x="66" y="386">Green bean</text><text x="186" y="386">Light roast</text>
+<text x="306" y="386">Medium roast</text><text x="426" y="386">Dark roast</text>
+</g>
+<text x="0" y="426" font-size="15" fill="#6B5A4F">Source: Trugo &amp; Macrae, Food Chemistry (1984), chlorogenic acid across roast severity</text>
+</g>
+
+<g transform="translate(660,150)">
+<text x="0" y="0" font-size="22" font-weight="600" fill="#1A0F0A" font-family="Space Grotesk, sans-serif">Scorching: a recognized roast defect</text>
+<text x="0" y="30" font-size="18" fill="#6B5A4F">Uneven heat exposure can scorch or "tip" beans</text>
+<g transform="translate(220,190)">
+<ellipse cx="0" cy="0" rx="170" ry="120" fill="#5B3A26" stroke="#1A0F0A" stroke-width="3"/>
+<ellipse cx="0" cy="0" rx="115" ry="75" fill="#7A4E33" opacity="0.9"/>
+<path d="M -6 -110 C 16 -48, 16 48, -6 110" fill="none" stroke="#1A0F0A" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="-105" cy="-55" rx="20" ry="13" fill="#1A0F0A" opacity="0.55"/>
+<ellipse cx="115" cy="48" rx="24" ry="14" fill="#1A0F0A" opacity="0.55"/>
+<ellipse cx="45" cy="-85" rx="14" ry="9" fill="#1A0F0A" opacity="0.5"/>
+</g>
+<g font-size="17" fill="#1A0F0A">
+<line x1="340" y1="165" x2="400" y2="140" stroke="#C8102E" stroke-width="1.5"/>
+<text x="404" y="138" fill="#C8102E" font-weight="600">Scorch mark</text>
+<text x="404" y="160">Localized overheating</text>
+</g>
+<text x="0" y="380" font-size="15" fill="#6B5A4F">Scorching and tipping are named roasting defects, not unique to one method.</text>
+</g>
+</svg>

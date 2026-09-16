@@ -1,0 +1,78 @@
+<svg viewBox="0 0 680 1500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t3m d3m">
+<title id="t3m">A Different Way to Roast Coffee</title>
+<desc id="d3m">Diagram of hot-air versus infrared radiant heating, a clearly attributed note on what infrared roaster manufacturers report, and the four ZENBEAN ingredients.</desc>
+<rect width="680" height="1500" fill="#F5F1EA"/>
+<text x="40" y="60" font-size="30" fill="#1A0F0A" font-weight="600" font-family="Space Grotesk, sans-serif">Two ways to deliver</text>
+<text x="40" y="96" font-size="30" fill="#1A0F0A" font-weight="600" font-family="Space Grotesk, sans-serif">heat to a bean</text>
+<text x="40" y="128" font-size="19" fill="#6B5A4F" font-family="Inter Tight, sans-serif">How the roast method applies heat</text>
+
+<g transform="translate(40,170)">
+<text x="0" y="0" font-size="20" font-weight="600" fill="#1A0F0A" font-family="Space Grotesk, sans-serif">Conventional (hot air / drum)</text>
+<rect x="0" y="20" width="600" height="220" fill="#EDE6D8" stroke="#E5DDD0" stroke-width="1.5"/>
+<ellipse cx="300" cy="130" rx="75" ry="56" fill="#5B3A26" stroke="#1A0F0A" stroke-width="2"/>
+<g stroke="#C8102E" stroke-width="2.5" fill="none" marker-end="url(#a1)">
+<path d="M 90,68 C 150,42 220,42 255,80"/>
+<path d="M 510,68 C 450,42 380,42 345,78"/>
+<path d="M 90,192 C 150,218 220,218 255,182"/>
+<path d="M 510,192 C 450,218 380,218 345,184"/>
+</g>
+<text x="0" y="272" font-size="17" fill="#6B5A4F">Hot air heats mainly through the surface first</text>
+</g>
+
+<g transform="translate(40,470)">
+<text x="0" y="0" font-size="20" font-weight="600" fill="#1A0F0A" font-family="Space Grotesk, sans-serif">Infrared (radiant)</text>
+<rect x="0" y="20" width="600" height="220" fill="#F6EFE3" stroke="#E5DDD0" stroke-width="1.5"/>
+<ellipse cx="300" cy="130" rx="75" ry="56" fill="#7A4E33" stroke="#1A0F0A" stroke-width="2"/>
+<g stroke="#C8102E" stroke-width="2.5" marker-end="url(#a2)">
+<line x1="90" y1="60" x2="230" y2="106"/>
+<line x1="300" y1="40" x2="300" y2="80"/>
+<line x1="510" y1="60" x2="370" y2="106"/>
+<line x1="90" y1="200" x2="230" y2="154"/>
+<line x1="510" y1="200" x2="370" y2="154"/>
+</g>
+<text x="0" y="272" font-size="17" fill="#6B5A4F">Radiant energy heats the bean directly</text>
+</g>
+
+<defs>
+<marker id="a1" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#C8102E"/></marker>
+<marker id="a2" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#C8102E"/></marker>
+</defs>
+
+<g transform="translate(40,780)">
+<rect x="0" y="0" width="600" height="220" fill="#FFFFFF" stroke="#E5DDD0" stroke-width="1.5"/>
+<text x="26" y="42" font-size="19" fill="#1A0F0A" font-weight="600" font-family="Space Grotesk, sans-serif">What roasters using</text>
+<text x="26" y="70" font-size="19" fill="#1A0F0A" font-weight="600" font-family="Space Grotesk, sans-serif">infrared report</text>
+<text x="26" y="108" font-size="17" fill="#6B5A4F">More even color development and</text>
+<text x="26" y="132" font-size="17" fill="#6B5A4F">a smoother, lower-acid cup.</text>
+<text x="26" y="164" font-size="16" fill="#6B5A4F">Reported by roaster manufacturers,</text>
+<text x="26" y="188" font-size="16" fill="#6B5A4F">not independently tested here.</text>
+</g>
+
+<g transform="translate(40,1060)" font-family="Inter Tight, sans-serif">
+<text x="0" y="0" font-size="20" font-weight="600" fill="#1A0F0A" font-family="Space Grotesk, sans-serif">What's in every cup</text>
+<g transform="translate(0,26)">
+<circle cx="32" cy="32" r="32" fill="#1A0F0A"/>
+<text x="32" y="40" font-size="17" fill="#FAF7F2" text-anchor="middle" font-weight="600">Ar</text>
+<text x="76" y="26" font-size="17" fill="#1A0F0A" font-weight="600">Organic Arabica</text>
+<text x="76" y="48" font-size="15" fill="#6B5A4F">Familiar flavor, caffeine</text>
+</g>
+<g transform="translate(0,110)">
+<circle cx="32" cy="32" r="32" fill="#C8102E"/>
+<text x="32" y="40" font-size="17" fill="#FAF7F2" text-anchor="middle" font-weight="600">LT</text>
+<text x="76" y="26" font-size="17" fill="#1A0F0A" font-weight="600">L-Theanine</text>
+<text x="76" y="48" font-size="15" fill="#6B5A4F">Calmer, balanced feeling</text>
+</g>
+<g transform="translate(0,194)">
+<circle cx="32" cy="32" r="32" fill="#1A0F0A"/>
+<text x="32" y="40" font-size="16" fill="#FAF7F2" text-anchor="middle" font-weight="600">Rh</text>
+<text x="76" y="26" font-size="17" fill="#1A0F0A" font-weight="600">Rhodiola Rosea</text>
+<text x="76" y="48" font-size="15" fill="#6B5A4F">Resilience, focus</text>
+</g>
+<g transform="translate(0,278)">
+<circle cx="32" cy="32" r="32" fill="#C8102E"/>
+<text x="32" y="40" font-size="17" fill="#FAF7F2" text-anchor="middle" font-weight="600">MCT</text>
+<text x="76" y="26" font-size="17" fill="#1A0F0A" font-weight="600">MCT Oil</text>
+<text x="76" y="48" font-size="15" fill="#6B5A4F">Clean, functional energy</text>
+</g>
+</g>
+</svg>

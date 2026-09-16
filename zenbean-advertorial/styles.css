@@ -493,11 +493,18 @@ h2 {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  body { font-size: 16.5px; }
-}
-@media (min-width: 721px) {
-  .kit-carousel-track {
-    aspect-ratio: 3/4;
+  body {
+    font-size: 16.5px;
+  }
+  .offer-body {
+    text-align: center;
+  }
+  .offer-badges {
+    justify-content: center;
+  }
+  .offer-list {
+    display: inline-block;
+    text-align: left;
   }
 }
   .format-row {
